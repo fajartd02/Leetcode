@@ -11,13 +11,17 @@ struct ListNode {
 ListNode* reverseList(ListNode* head) {
     stack<int> s;
     struct ListNode *curr = head;
-    while(curr != NULL) {
+    while(curr) {
         s.push(curr->val);
         curr = curr->next;
     }
+
     curr = head;
     while(!s.empty()) {
         curr->val = s.top();
         s.pop();
+        curr = curr->next;
     }
+    
+    return head;
 }
