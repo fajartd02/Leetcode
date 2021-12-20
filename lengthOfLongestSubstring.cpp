@@ -35,7 +35,7 @@ using namespace std;
 // }
 
 
-// O(m*n)
+// O(m*n*k)
 // string longestCommonPrefix(vector<string>& strs) {
 //     if(strs.size() == 0) return "";
 //     string prefix = strs[0];
@@ -50,7 +50,7 @@ using namespace std;
 // }
 
 // loop
-// O(m*n + n)
+// O(m*n + n) = O(m*n)
 string longestCommonPrefix(vector<string>& strs) {
     int len = INT_MAX;
     string ans = "";
